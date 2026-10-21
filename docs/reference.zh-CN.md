@@ -280,4 +280,3 @@ UI 自动化运行在 CodeMirror + jsdom 和 Obsidian API 测试替身上，
 性能基准只测插件自身的笔记解析与状态协调，不把 Lean 编译、Mathlib 导入、
 CodeMirror 布局或 Obsidian 窗口绘制混入同一数字。测试说明与实测结果见
 [验证记录](validation.md) 和 [性能记录](performance.md)。
-
