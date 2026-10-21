@@ -1,0 +1,10 @@
+{
+  "id": "lean4-blocks",
+  "name": "Lean4",
+  "version": "0.1.0",
+  "minAppVersion": "1.8.0",
+  "description": "Check independent Lean 4 blocks or shared sessions and inspect proof goals with an automatically managed basic environment.",
+  "author": "pluveto",
+  "isDesktopOnly": true,
+  "authorUrl": "https://github.com/pluveto"
+}

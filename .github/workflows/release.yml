@@ -1,0 +1,23 @@
+name: Draft release
+on:
+  push:
+    tags: ['*']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Verify release version
+        run: node --input-type=module -e "import fs from 'node:fs'; const m=JSON.parse(fs.readFileSync('manifest.json')); const p=JSON.parse(fs.readFileSync('package.json')); const v=JSON.parse(fs.readFileSync('versions.json')); if(process.env.GITHUB_REF_NAME!==m.version || p.version!==m.version || v[m.version]!==m.minAppVersion) process.exit(1);"
+      - run: npm run check
+      - name: Create draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" main.js manifest.json styles.css LICENSE THIRD_PARTY_NOTICES.txt --verify-tag --draft --title "Lean4 $GITHUB_REF_NAME" --notes-file CHANGELOG.md

@@ -1,0 +1,155 @@
+{
+  "measuredAt": "2026-10-20T16:45:33.848Z",
+  "environment": {
+    "platform": "win32",
+    "architecture": "x64",
+    "node": "v25.9.0",
+    "cpu": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "logicalCpus": 16,
+    "memoryGiB": 94
+  },
+  "methodology": {
+    "warmupPerScenario": 8,
+    "samplesPerScenario": 40,
+    "durationUnit": "milliseconds",
+    "included": "Production MarkdownBlockParser and BlockCatalog; shared scenarios additionally include DocumentCatalog/ProofDocument; invariant checks, allocations and normal GC",
+    "excluded": "Module loading, Obsidian/CodeMirror UI, IPC, Lean process startup, elaboration and Mathlib imports",
+    "note": "Synthetic deterministic notes; elapsed times depend on host load and are not a UI latency guarantee"
+  },
+  "results": [
+    {
+      "scenario": "parse",
+      "blocks": 100,
+      "utf16CodeUnits": 21560,
+      "utf8Bytes": 35772,
+      "p50Ms": 0.105,
+      "p95Ms": 0.248,
+      "minMs": 0.072,
+      "maxMs": 0.319
+    },
+    {
+      "scenario": "prose-update",
+      "blocks": 100,
+      "utf16CodeUnits": 21560,
+      "utf8Bytes": 35772,
+      "p50Ms": 0.139,
+      "p95Ms": 0.315,
+      "minMs": 0.121,
+      "maxMs": 0.338
+    },
+    {
+      "scenario": "one-block-edit",
+      "blocks": 100,
+      "utf16CodeUnits": 21560,
+      "utf8Bytes": 35772,
+      "p50Ms": 0.151,
+      "p95Ms": 0.306,
+      "minMs": 0.111,
+      "maxMs": 0.425
+    },
+    {
+      "scenario": "parse",
+      "blocks": 1000,
+      "utf16CodeUnits": 220460,
+      "utf8Bytes": 362472,
+      "p50Ms": 0.762,
+      "p95Ms": 1.403,
+      "minMs": 0.686,
+      "maxMs": 1.717
+    },
+    {
+      "scenario": "prose-update",
+      "blocks": 1000,
+      "utf16CodeUnits": 220460,
+      "utf8Bytes": 362472,
+      "p50Ms": 1.393,
+      "p95Ms": 1.973,
+      "minMs": 1.272,
+      "maxMs": 2.172
+    },
+    {
+      "scenario": "one-block-edit",
+      "blocks": 1000,
+      "utf16CodeUnits": 220460,
+      "utf8Bytes": 362472,
+      "p50Ms": 1.318,
+      "p95Ms": 1.858,
+      "minMs": 1.274,
+      "maxMs": 1.957
+    },
+    {
+      "scenario": "parse",
+      "blocks": 5000,
+      "utf16CodeUnits": 1124460,
+      "utf8Bytes": 1834472,
+      "p50Ms": 4.115,
+      "p95Ms": 7.102,
+      "minMs": 3.705,
+      "maxMs": 8.565
+    },
+    {
+      "scenario": "prose-update",
+      "blocks": 5000,
+      "utf16CodeUnits": 1124460,
+      "utf8Bytes": 1834472,
+      "p50Ms": 9.186,
+      "p95Ms": 13.15,
+      "minMs": 8.062,
+      "maxMs": 16.234
+    },
+    {
+      "scenario": "one-block-edit",
+      "blocks": 5000,
+      "utf16CodeUnits": 1124460,
+      "utf8Bytes": 1834472,
+      "p50Ms": 8.918,
+      "p95Ms": 12.443,
+      "minMs": 8.236,
+      "maxMs": 12.617
+    },
+    {
+      "scenario": "session-initial-build",
+      "blocks": 1000,
+      "sessions": 100,
+      "utf16CodeUnits": 134399,
+      "utf8Bytes": 192411,
+      "p50Ms": 2.324,
+      "p95Ms": 4.808,
+      "minMs": 1.944,
+      "maxMs": 6.798
+    },
+    {
+      "scenario": "session-prose-update",
+      "blocks": 1000,
+      "sessions": 100,
+      "utf16CodeUnits": 134399,
+      "utf8Bytes": 192411,
+      "p50Ms": 2.358,
+      "p95Ms": 4.721,
+      "minMs": 2.113,
+      "maxMs": 5.271
+    },
+    {
+      "scenario": "session-title-update",
+      "blocks": 1000,
+      "sessions": 100,
+      "utf16CodeUnits": 134399,
+      "utf8Bytes": 192411,
+      "p50Ms": 2.355,
+      "p95Ms": 5.031,
+      "minMs": 2.106,
+      "maxMs": 5.504
+    },
+    {
+      "scenario": "session-predecessor-edit",
+      "blocks": 1000,
+      "sessions": 100,
+      "utf16CodeUnits": 134399,
+      "utf8Bytes": 192411,
+      "p50Ms": 2.328,
+      "p95Ms": 5.206,
+      "minMs": 2.124,
+      "maxMs": 5.537
+    }
+  ]
+}

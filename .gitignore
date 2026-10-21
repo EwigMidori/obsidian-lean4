@@ -1,0 +1,12 @@
+node_modules/
+main.js
+*.js.map
+coverage/
+.DS_Store
+data.json
+*.log
+**/.lake/
+.env
+.env.*
+!.env.example
+.tmp*/

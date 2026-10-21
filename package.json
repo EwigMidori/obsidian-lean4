@@ -1,0 +1,41 @@
+{
+  "name": "obsidian-lean4",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lean 4 proof blocks and shared sessions in Obsidian",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc --noEmit && node esbuild.config.mjs production",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check:architecture": "node scripts/check-architecture.mjs",
+    "bench": "node scripts/benchmark.mjs",
+    "check": "npm run typecheck && npm run test && npm run check:architecture && npm run build"
+  },
+  "dependencies": {
+    "vscode-jsonrpc": "^8.2.1"
+  },
+  "devDependencies": {
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/view": "^6.38.2",
+    "@types/node": "^22.18.0",
+    "esbuild": "^0.25.10",
+    "jsdom": "^28.1.0",
+    "obsidian": "^1.8.7",
+    "typescript": "^5.9.2",
+    "vitest": "^4.1.12"
+  },
+  "license": "MIT",
+  "author": "pluveto",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pluveto/obsidian-lean4.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pluveto/obsidian-lean4/issues"
+  },
+  "homepage": "https://github.com/pluveto/obsidian-lean4#readme"
+}

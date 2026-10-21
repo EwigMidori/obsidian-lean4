@@ -1,0 +1,6 @@
+name = "obsidianSmoke"
+version = "0.1.0"
+defaultTargets = ["FixtureSupport"]
+
+[[lean_lib]]
+name = "FixtureSupport"
