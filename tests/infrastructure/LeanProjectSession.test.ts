@@ -1,3 +1,4 @@
+import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { CancellationTokenSource } from "vscode-jsonrpc";
 import { describe, expect, it } from "vitest";
@@ -19,6 +20,23 @@ class SessionHarness {
     notification: () => {},
     status: (status) => this.statuses.push(status),
   });
+
+  static async running(processId: number): Promise<boolean> {
+    try {
+      process.kill(processId, 0);
+      if (process.platform === "linux") {
+        // An exited orphan can remain a zombie until the runner's init reaps it.
+        // kill(pid, 0) still succeeds then, despite the process no longer executing.
+        const stat = await readFile('/proc/' + processId + '/stat', "utf8");
+        const state = stat.slice(stat.lastIndexOf(")") + 2).split(" ")[0];
+        return state !== "Z" && state !== "X";
+      }
+      return true;
+    } catch (error) {
+      if (["ESRCH", "ENOENT"].includes((error as NodeJS.ErrnoException).code ?? "")) return false;
+      throw error;
+    }
+  }
 
   static cleanupDescendant(processId: number | undefined): void {
     if (!processId) return;
@@ -124,9 +142,9 @@ describe("LeanProjectSession", () => {
     let descendant: number | undefined;
     try {
       descendant = await session.request<number>("descendant", {});
-      expect(() => process.kill(descendant as number, 0)).not.toThrow();
+      expect(await SessionHarness.running(descendant as number)).toBe(true);
       await session.close();
-      expect(() => process.kill(descendant as number, 0)).toThrow();
+      await expect.poll(() => SessionHarness.running(descendant as number), { timeout: 2_000 }).toBe(false);
     } finally {
       await session.close();
       SessionHarness.cleanupDescendant(descendant);
@@ -139,7 +157,7 @@ describe("LeanProjectSession", () => {
     try {
       descendant = await harness.session.request<number>("descendant", {});
       await harness.session.close();
-      expect(() => process.kill(descendant as number, 0)).toThrow();
+      await expect.poll(() => SessionHarness.running(descendant as number), { timeout: 2_000 }).toBe(false);
     } finally {
       await harness.session.close();
       SessionHarness.cleanupDescendant(descendant);
@@ -159,7 +177,7 @@ describe("LeanProjectSession", () => {
       }
       await harness.session.close();
       expect(harness.session.recentLog()).not.toContain("orphan-process cleanup exited");
-      expect(() => process.kill(descendant as number, 0)).toThrow();
+      await expect.poll(() => SessionHarness.running(descendant as number), { timeout: 2_000 }).toBe(false);
     } finally {
       await harness.session.close();
       SessionHarness.cleanupDescendant(descendant);
