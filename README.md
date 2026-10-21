@@ -19,7 +19,7 @@ You can start in an ordinary note: no separate Lean project is needed. The inter
 
 ## 1. Install the plugin
 
-You need **Obsidian desktop 1.8.0 or later**. The plugin is not yet listed in the community plugin directory.
+You need **Obsidian desktop 1.8.7 or later**. The plugin is not yet listed in the community plugin directory.
 
 When a published version is available, download `main.js`, `manifest.json`, and `styles.css` from [Releases](https://github.com/ewigmidori/obsidian-lean4/releases). Draft releases are visible only to repository collaborators. If no published version is listed, [build from source](#build-from-source).
 

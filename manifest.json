@@ -1,8 +1,8 @@
 {
   "id": "lean",
   "name": "Lean4",
-  "version": "0.1.1",
-  "minAppVersion": "1.8.0",
+  "version": "0.1.2",
+  "minAppVersion": "1.8.7",
   "description": "Check independent Lean 4 blocks or shared sessions and inspect proof goals with an automatically managed basic environment.",
   "author": "ewigmidori",
   "isDesktopOnly": true,

@@ -42,7 +42,7 @@ npm run check
 ```
 
 随后在 Obsidian 的社区插件设置中启用 **Lean4**。
-最低 Obsidian 版本为 1.8.0。这个仓库没有自动向 Vault 安装插件的步骤。
+最低 Obsidian 版本为 1.8.7。这个仓库没有自动向 Vault 安装插件的步骤。
 
 开发时运行 `npm run dev`，源文件变化会重新构建 `main.js`。在 Obsidian 中重新加载插件，
 才能应用新的构建。

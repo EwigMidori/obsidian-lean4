@@ -19,7 +19,7 @@ Lean4 适合数学笔记、简短实验，以及边解释边写的证明。**默
 
 ## 1. 安装插件
 
-需要 **Obsidian 桌面版 1.8.0 或更新版本**。插件目前尚未上架社区插件目录。
+需要 **Obsidian 桌面版 1.8.7 或更新版本**。插件目前尚未上架社区插件目录。
 
 有正式版本后，从 [Releases](https://github.com/ewigmidori/obsidian-lean4/releases) 下载 `main.js`、`manifest.json` 和 `styles.css`。草稿发布只有仓库协作者可见；如果还没有公开版本，请先[从源码构建](#从源码构建)。
 

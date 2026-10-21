@@ -48,7 +48,6 @@ export class LeanSettingsTab extends PluginSettingTab {
   override display(): void {
     this.stopObserving();
     this.containerEl.empty();
-    this.containerEl.createEl("h2", { text: LeanI18n.text("app.name") });
     this.containerEl.createEl("p", {
       text: LeanI18n.text("settings.introduction")
     });

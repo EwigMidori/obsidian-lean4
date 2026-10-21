@@ -90,7 +90,6 @@ export default class LeanProofPlugin extends Plugin {
 
   override onunload(): void {
     this.loaded = false;
-    this.app.workspace.detachLeavesOfType(LeanGoalView.type);
     void this.host?.dispose().catch(error => console.error("Lean 4 shutdown failed", error));
   }
 

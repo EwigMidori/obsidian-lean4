@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 - 2026-10-21
+
+- Preserve the goals pane location when the plugin reloads.
+- Require Obsidian 1.8.7 to match the language API used by the plugin.
+- Remove the redundant settings page heading to follow Obsidian UI guidelines.
+
 ## 0.1.1 - 2026-10-21
 
 - Use the directory-compatible plugin ID `lean`; the display name remains Lean4.
