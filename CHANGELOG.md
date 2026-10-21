@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 - 2026-10-21
+
+- Use the directory-compatible plugin ID `lean`; the display name remains Lean4.
+- Manual installations of 0.1.0 must rename their plugin folder from `lean4-blocks` to `lean` and enable the new entry. Preserve data.json when migrating.
+
 ## 0.1.0 - 2026-10-21
 
 - Independent Lean / Lean4 blocks and opt-in shared sessions within a note.

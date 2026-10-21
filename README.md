@@ -23,11 +23,11 @@ You need **Obsidian desktop 1.8.0 or later**. The plugin is not yet listed in th
 
 When a published version is available, download `main.js`, `manifest.json`, and `styles.css` from [Releases](https://github.com/ewigmidori/obsidian-lean4/releases). Draft releases are visible only to repository collaborators. If no published version is listed, [build from source](#build-from-source).
 
-1. Create this folder inside your vault: `.obsidian/plugins/lean4-blocks/`.
+1. Create this folder inside your vault: `.obsidian/plugins/lean/`.
 2. Copy the three files into it:
 
    ```text
-   <your vault>/.obsidian/plugins/lean4-blocks/
+   <your vault>/.obsidian/plugins/lean/
      main.js
      manifest.json
      styles.css

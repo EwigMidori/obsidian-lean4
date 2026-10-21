@@ -35,7 +35,7 @@ npm run check
 将以下三个文件复制到你的 Vault 中：
 
 ```text
-<Vault>/.obsidian/plugins/lean4-blocks/
+<Vault>/.obsidian/plugins/lean/
   main.js
   manifest.json
   styles.css

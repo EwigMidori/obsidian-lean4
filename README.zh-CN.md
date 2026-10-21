@@ -23,11 +23,11 @@ Lean4 适合数学笔记、简短实验，以及边解释边写的证明。**默
 
 有正式版本后，从 [Releases](https://github.com/ewigmidori/obsidian-lean4/releases) 下载 `main.js`、`manifest.json` 和 `styles.css`。草稿发布只有仓库协作者可见；如果还没有公开版本，请先[从源码构建](#从源码构建)。
 
-1. 在 Vault 中创建 `.obsidian/plugins/lean4-blocks/` 文件夹。
+1. 在 Vault 中创建 `.obsidian/plugins/lean/` 文件夹。
 2. 将三个文件放入其中：
 
    ```text
-   <你的 Vault>/.obsidian/plugins/lean4-blocks/
+   <你的 Vault>/.obsidian/plugins/lean/
      main.js
      manifest.json
      styles.css
