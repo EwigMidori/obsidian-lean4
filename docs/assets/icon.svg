@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">Lean4</title><desc id="desc">A geometric L joins a proof checkmark on an indigo tile.</desc>
+<defs><linearGradient id="tile" x1="8" y1="0" x2="120" y2="128" gradientUnits="userSpaceOnUse"><stop stop-color="#7569F5"/><stop offset="1" stop-color="#4141A8"/></linearGradient><linearGradient id="proof" x1="65" y1="75" x2="105" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#A6F3DC"/><stop offset="1" stop-color="#D9FFF2"/></linearGradient></defs>
+<rect x="4" y="4" width="120" height="120" rx="30" fill="url(#tile)"/>
+<rect x="5" y="5" width="118" height="118" rx="29" stroke="white" stroke-opacity=".15" stroke-width="2"/>
+<path d="M37 34V88H67" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M63 57L77 71L101 39" stroke="url(#proof)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="98" cy="94" r="5" fill="#B8B3FF"/>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740" role="img" aria-labelledby="title desc">
+<title id="title">写下思路，看见证明。</title><desc id="desc">界面示意 · 非真实截图. A calculation returns 10. A proof uses hypothesis h to prove P.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#15192C"/><stop offset="1" stop-color="#25213D"/></linearGradient><linearGradient id="accent" x2="1" y2="1"><stop stop-color="#B5A7FF"/><stop offset="1" stop-color="#8CE2C5"/></linearGradient></defs>
+<style>text{font-family:Inter,'Segoe UI','Microsoft YaHei',Arial,sans-serif;fill:#E8EAF4}.mono{font-family:'Cascadia Code',Consolas,'Liberation Mono',monospace;font-size:20px}.muted{fill:#A1A8BF}.small{font-size:15px}.label{font-size:17px;font-weight:600}.key{fill:#C6AEFF}.green{fill:#96E1BF}</style>
+<rect width="1200" height="740" rx="24" fill="url(#bg)"/>
+<path d="M1140 0V120M1080 0V120M1020 0V120M960 0V120M920 40H1200M920 100H1200" stroke="#B6A9FF" stroke-opacity=".05"/>
+<rect x="40" y="38" width="5" height="58" rx="2.5" fill="url(#accent)"/>
+<text x="64" y="67" font-size="34" font-weight="700">写下思路，看见证明。</text>
+<text x="64" y="98" font-size="18" class="muted">在笔记里运行 Lean，让每一步都有依据。</text>
+<rect x="40" y="135" width="1120" height="540" rx="14" fill="#1C2030" stroke="#41465D"/>
+<path d="M54 135H1146Q1160 135 1160 149V185H40V149Q40 135 54 135" fill="#25293B"/>
+<circle cx="64" cy="160" r="5" fill="#686F88"/><circle cx="82" cy="160" r="5" fill="#686F88"/><circle cx="100" cy="160" r="5" fill="#686F88"/>
+<text x="126" y="166" class="small muted">Lean4 / 数学笔记</text>
+<path d="M750 185V675" stroke="#3B4056"/>
+<text x="68" y="226" class="label">先试一个计算</text>
+<rect x="68" y="245" width="654" height="175" rx="10" fill="#171B28" stroke="#383E54"/>
+<path d="M78 245H712Q722 245 722 255V291H68V255Q68 245 78 245" fill="#292E42"/>
+<text x="86" y="274" class="label">Lean4</text>
+<rect x="157" y="256" width="86" height="25" rx="6" fill="#254438"/><text x="169" y="274" class="small green">已检查</text>
+<path d="M653 259L653 277L666 268Z" fill="none" stroke="#CAD0E2" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M691 260L684 268L691 276M705 260L712 268L705 276M701 258L695 278" fill="none" stroke="#CAD0E2" stroke-width="1.8"/>
+<text x="88" y="331" class="mono"><tspan class="key">#eval</tspan><tspan> </tspan><tspan fill="#F1C78E">2</tspan><tspan> * </tspan><tspan fill="#F1C78E">3</tspan><tspan> + </tspan><tspan fill="#F1C78E">4</tspan></text>
+<path d="M68 350H722" stroke="#383E54"/>
+<rect x="83" y="365" width="3" height="39" rx="1.5" fill="#89BBF3"/>
+<text x="98" y="378" class="small" style="fill:#89BBF3">信息</text><text x="210" y="378" class="small muted">行 1 · 列 1</text>
+<text x="98" y="403" class="mono">10</text>
+<text x="68" y="460" class="label">再完成一个证明</text>
+<rect x="68" y="479" width="654" height="144" rx="10" fill="#171B28" stroke="#383E54"/>
+<text x="88" y="518" class="mono"><tspan class="key">example</tspan><tspan> (P : Prop) (h : P) : P := </tspan><tspan class="key">by</tspan></text>
+<rect x="82" y="532" width="624" height="33" rx="4" fill="#32304D"/>
+<path d="M112 538V560" stroke="#C4B6FF" stroke-width="2"/>
+<text x="116" y="555" class="mono">exact h</text>
+<text x="88" y="601" class="small muted">光标位于 exact h 之前</text>
+<text x="778" y="226" font-size="22" font-weight="600">证明目标</text>
+<circle cx="785" cy="258" r="4" fill="#96E1BF"/><text x="799" y="263" class="small green">服务就绪</text>
+<rect x="778" y="289" width="354" height="265" rx="10" fill="#202537" stroke="#41465D"/>
+<text x="800" y="323" class="label muted">已知</text>
+<text x="800" y="365" class="mono">P : Prop</text><text x="800" y="398" class="mono">h : P</text>
+<path d="M778 425H1132" stroke="#41465D"/>
+<path d="M780 443V533" stroke="#B7A6FF" stroke-width="3" stroke-linecap="round"/>
+<text x="800" y="463" class="label key">待证明</text>
+<text x="800" y="507" class="mono key" style="font-size:26px">⊢ P</text>
+<text x="40" y="712" class="small muted">独立代码块 · 按需共享 session · 随写随查</text>
+<text x="1160" y="712" text-anchor="end" class="small muted">界面示意 · 非真实截图</text>
+</svg>
