@@ -5,7 +5,7 @@
   <p>Lean 4 code blocks and proof goals, right inside Obsidian.</p>
   <p>English · <a href="README.zh-CN.md">简体中文</a></p>
 
-[![CI](https://github.com/pluveto/obsidian-lean4/actions/workflows/ci.yml/badge.svg)](https://github.com/pluveto/obsidian-lean4/actions/workflows/ci.yml)
+[![CI](https://github.com/ewigmidori/obsidian-lean4/actions/workflows/ci.yml/badge.svg)](https://github.com/ewigmidori/obsidian-lean4/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 </div>
 
@@ -21,7 +21,7 @@ You can start in an ordinary note: no separate Lean project is needed. The inter
 
 You need **Obsidian desktop 1.8.0 or later**. The plugin is not yet listed in the community plugin directory.
 
-When a published version is available, download `main.js`, `manifest.json`, and `styles.css` from [Releases](https://github.com/pluveto/obsidian-lean4/releases). Draft releases are visible only to repository collaborators. If no published version is listed, [build from source](#build-from-source).
+When a published version is available, download `main.js`, `manifest.json`, and `styles.css` from [Releases](https://github.com/ewigmidori/obsidian-lean4/releases). Draft releases are visible only to repository collaborators. If no published version is listed, [build from source](#build-from-source).
 
 1. Create this folder inside your vault: `.obsidian/plugins/lean4-blocks/`.
 2. Copy the three files into it:
@@ -167,7 +167,7 @@ This external-tool installation behavior is disclosed for community review; disc
 Install Node.js **22.12+ or 24+**, then run:
 
 ```sh
-git clone https://github.com/pluveto/obsidian-lean4.git
+git clone https://github.com/ewigmidori/obsidian-lean4.git
 cd obsidian-lean4
 npm ci
 npm run check
@@ -177,7 +177,7 @@ This validates the code and builds `main.js`. Install it alongside `manifest.jso
 
 ## Contribute and learn more
 
-- [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Report an issue](https://github.com/pluveto/obsidian-lean4/issues)
+- [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Report an issue](https://github.com/ewigmidori/obsidian-lean4/issues)
 - [Detailed reference (Chinese)](docs/reference.zh-CN.md): fence syntax, settings, environment storage, and limits.
 - [Architecture (Chinese)](docs/architecture.md) · [Performance (Chinese)](docs/performance.md)
 

@@ -5,7 +5,7 @@
   <p>在 Obsidian 中检查 Lean 4 代码、查看证明目标。</p>
   <p><a href="README.md">English</a> · 简体中文</p>
 
-[![CI](https://github.com/pluveto/obsidian-lean4/actions/workflows/ci.yml/badge.svg)](https://github.com/pluveto/obsidian-lean4/actions/workflows/ci.yml)
+[![CI](https://github.com/ewigmidori/obsidian-lean4/actions/workflows/ci.yml/badge.svg)](https://github.com/ewigmidori/obsidian-lean4/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 </div>
 
@@ -21,7 +21,7 @@ Lean4 适合数学笔记、简短实验，以及边解释边写的证明。**默
 
 需要 **Obsidian 桌面版 1.8.0 或更新版本**。插件目前尚未上架社区插件目录。
 
-有正式版本后，从 [Releases](https://github.com/pluveto/obsidian-lean4/releases) 下载 `main.js`、`manifest.json` 和 `styles.css`。草稿发布只有仓库协作者可见；如果还没有公开版本，请先[从源码构建](#从源码构建)。
+有正式版本后，从 [Releases](https://github.com/ewigmidori/obsidian-lean4/releases) 下载 `main.js`、`manifest.json` 和 `styles.css`。草稿发布只有仓库协作者可见；如果还没有公开版本，请先[从源码构建](#从源码构建)。
 
 1. 在 Vault 中创建 `.obsidian/plugins/lean4-blocks/` 文件夹。
 2. 将三个文件放入其中：
@@ -167,7 +167,7 @@ Lean4 在本机启动 Lean 和 Lake 进程，检查时将代码交给本地语�
 安装 Node.js **22.12+ 或 24+**，然后运行：
 
 ```sh
-git clone https://github.com/pluveto/obsidian-lean4.git
+git clone https://github.com/ewigmidori/obsidian-lean4.git
 cd obsidian-lean4
 npm ci
 npm run check
@@ -177,7 +177,7 @@ npm run check
 
 ## 参与和深入阅读
 
-- [贡献指南（英文）](CONTRIBUTING.md) · [变更日志（英文）](CHANGELOG.md) · [反馈问题](https://github.com/pluveto/obsidian-lean4/issues)
+- [贡献指南（英文）](CONTRIBUTING.md) · [变更日志（英文）](CHANGELOG.md) · [反馈问题](https://github.com/ewigmidori/obsidian-lean4/issues)
 - [详细参考](docs/reference.zh-CN.md)：完整围栏语法、设置、环境存储位置和使用限制。
 - [架构说明](docs/architecture.md) · [性能记录](docs/performance.md)
 
