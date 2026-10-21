@@ -152,6 +152,16 @@ example (P Q : Prop) : P → Q := by
 
 自动化检查在 Windows 和 Linux 上运行，但不能替代 Obsidian 桌面测试。具体实测范围见[验证记录](docs/validation.md)。
 
+## 网络访问与外部工具
+
+Lean4 在本机启动 Lean 和 Lake 进程，检查时将代码交给本地语言服务器，不上传到在线证明服务。插件没有遥测，不要求付费服务或账号。
+
+**可选的工具安装：**主动点击“准备 Lean”后，插件才会下载并安装缺少的外部工具。先检测已安装的 Lean 4.35.0；没有 elan 时，从 leanprover/elan 的官方 GitHub Releases（含 GitHub 资源重定向）下载 elan v4.2.4，核对固定 SHA-256 后安装到用户缓存，再调用 elan 从 Lean 官方分发服务安装 leanprover/lean4:v4.35.0。固定摘要校验针对 elan 安装包；Lean 下载由 elan 管理。仅检测环境不会触发这些下载。
+
+**Vault 外文件访问：**基础项目和私有工具存放在 Windows 的 %LOCALAPPDATA%/lean4-obsidian-plugin、macOS 的 ~/Library/Caches/lean4-obsidian-plugin，或 Linux 的 $XDG_CACHE_HOME/lean4-obsidian-plugin（未设置时使用 ~/.cache/lean4-obsidian-plugin）。复用已有 elan 时，缺少的工具链安装到该管理器的工具链目录。插件不修改持久化 PATH 或默认 Lean 工具链。已有项目模式访问用户指定的 Lake 项目，Lake 可能维护自己的 .lake 元数据。
+
+以上外部工具安装行为将如实交由社区审核；披露本身不代表获得了目录依赖安装政策的例外许可。
+
 ## 从源码构建
 
 安装 Node.js **22.12+ 或 24+**，然后运行：

@@ -152,6 +152,16 @@ This is an early desktop release. It provides plain-text goals, diagnostics, bas
 
 Automated checks run on Windows and Linux. These do not replace desktop testing in Obsidian; see the [validation record (Chinese)](docs/validation.md) for what has actually been tested.
 
+## Network access and external tools
+
+Lean4 runs Lean and Lake as local external processes. Checking sends code to the local language server, not to a hosted proof service. The plugin has no telemetry and requires no paid service or account.
+
+**Optional tool installation:** choosing **Prepare Lean** explicitly permits downloading and installing missing external tools. The plugin first looks for an installed Lean 4.35.0 toolchain. If elan is missing, it downloads elan v4.2.4 from the official leanprover/elan GitHub releases (including GitHub asset redirects), verifies the archive against a pinned SHA-256 digest, and installs it in its user cache. It then invokes elan to install leanprover/lean4:v4.35.0 from Lean's official distribution infrastructure. The pinned archive verification applies to the elan installer; the Lean download is managed by elan. Detection alone does not start these downloads.
+
+**Files outside the vault:** the managed basic project and private tools are stored under %LOCALAPPDATA%/lean4-obsidian-plugin on Windows, ~/Library/Caches/lean4-obsidian-plugin on macOS, or $XDG_CACHE_HOME/lean4-obsidian-plugin (falling back to ~/.cache/lean4-obsidian-plugin) on Linux. Reusing an existing elan installs a missing toolchain in that manager's toolchain storage instead. The plugin does not modify the persistent PATH or default Lean toolchain. Existing-project mode accesses the Lake project you select; Lake may maintain its own .lake metadata.
+
+This external-tool installation behavior is disclosed for community review; disclosure does not itself establish an exception to the directory's dependency-installation policy.
+
 ## Build from source
 
 Install Node.js **22.12+ or 24+**, then run:
